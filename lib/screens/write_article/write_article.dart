@@ -2980,143 +2980,49 @@ class _WriteArticleState extends State<WriteArticle>
                                                     .titleLargeFamily),
                                           ),
                                         ),
-                                        if(widget.id != -1)for(int i=-1;i>=reviews_text.length*-1;i--)...[
+                                        if(widget.id != -1)for(int i=reviews_text.length-1; i>=0; i--)...[
                                           Padding(
                                             padding:
                                             const EdgeInsetsDirectional.fromSTEB(
                                                 4, 8, 4, 8),
-                                            child: Row(
-                                              children: [
-                                                Container(
-                                                  width: double.infinity,
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
-                                                        context)
-                                                        .secondaryBackground,
-                                                    boxShadow: [
-                                                      BoxShadow(
-                                                        blurRadius: 0,
-                                                        color: FlutterFlowTheme
-                                                            .of(context)
-                                                            .primaryBackground,
-                                                        offset: const Offset(
-                                                          0.0,
-                                                          1,
-                                                        ),
-                                                      )
-                                                    ],
-                                                    borderRadius:
-                                                    BorderRadius.circular(8),
-                                                    border: Border.all(
-                                                      color: FlutterFlowTheme.of(
-                                                          context)
-                                                          .alternate,
-                                                      width: 2,
+                                            child: Container(
+                                              width: double.infinity,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(
+                                                    context)
+                                                    .secondaryBackground,
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    blurRadius: 0,
+                                                    color: FlutterFlowTheme
+                                                        .of(context)
+                                                        .primaryBackground,
+                                                    offset: const Offset(
+                                                      0.0,
+                                                      1,
                                                     ),
-                                                  ),
-                                                  child: Padding(
-                                                    padding: const EdgeInsetsDirectional
-                                                        .fromSTEB(8, 8, 12, 8),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                      MainAxisSize.max,
-                                                      crossAxisAlignment:
-                                                      CrossAxisAlignment
-                                                          .center,
-                                                      children: [
-                                                        Container(
-                                                          width: 70,
-                                                          height: 70,
-                                                          decoration:
-                                                          BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                .of(context)
-                                                                .secondaryBackground,
-                                                            boxShadow: const [
-                                                              BoxShadow(
-                                                                blurRadius: 4,
-                                                                color: Color(
-                                                                    0x33000000),
-                                                                offset: Offset(
-                                                                  0,
-                                                                  2,
-                                                                ),
-                                                              )
-                                                            ],
-                                                            borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
-                                                            border: Border.all(
-                                                              color: FlutterFlowTheme
-                                                                  .of(context)
-                                                                  .primary,
-                                                              width: 2,
-                                                            ),
-                                                          ),
-                                                          child: Icon(
-                                                            Icons.reviews_rounded,
-                                                            color: FlutterFlowTheme
-                                                                .of(context)
-                                                                .secondaryText,
-                                                            size: 32,
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          child: Column(
-                                                            mainAxisSize:
-                                                            MainAxisSize.max,
-                                                            crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .start,
-                                                            children: [
-                                                              Padding(
-                                                                padding:
-                                                                const EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                    16,
-                                                                    2,
-                                                                    0,
-                                                                    2),
-                                                                child: Text(
-                                                                  reviews_text[i],
-                                                                  style: FlutterFlowTheme.of(
-                                                                      context)
-                                                                      .labelMedium
-                                                                      .override(
-                                                                    fontFamily:
-                                                                    FlutterFlowTheme.of(context)
-                                                                        .labelMediumFamily,
-                                                                    letterSpacing:
-                                                                    0,
-                                                                    useGoogleFonts: GoogleFonts
-                                                                        .asMap()
-                                                                        .containsKey(
-                                                                        FlutterFlowTheme.of(context).labelMediumFamily),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ).animateOnPageLoad(animationsMap[
-                                                'containerOnPageLoadAnimation2']!),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(8.0),
-                                                  child: InkWell(
-                                                    splashColor: Colors.transparent,
-                                                    focusColor: Colors.transparent,
-                                                    hoverColor: Colors.transparent,
-                                                    highlightColor:
-                                                    Colors.transparent,
-                                                    onTap: () async {
-                                                      setState(() {
-                                                        reviews_text.removeAt(i);
-                                                      });
-                                                    },
-                                                    child: Container(
+                                                  )
+                                                ],
+                                                borderRadius:
+                                                BorderRadius.circular(8),
+                                                border: Border.all(
+                                                  color: FlutterFlowTheme.of(
+                                                      context)
+                                                      .alternate,
+                                                  width: 2,
+                                                ),
+                                              ),
+                                              child: Padding(
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(8, 8, 12, 8),
+                                                child: Row(
+                                                  mainAxisSize:
+                                                  MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                  CrossAxisAlignment
+                                                      .center,
+                                                  children: [
+                                                    Container(
                                                       width: 70,
                                                       height: 70,
                                                       decoration:
@@ -3146,17 +3052,107 @@ class _WriteArticleState extends State<WriteArticle>
                                                         ),
                                                       ),
                                                       child: Icon(
-                                                        Icons.close_rounded,
+                                                        Icons.reviews_rounded,
                                                         color: FlutterFlowTheme
                                                             .of(context)
-                                                            .error,
+                                                            .secondaryText,
                                                         size: 32,
                                                       ),
                                                     ),
-                                                  ),
+                                                    Expanded(
+                                                      child: Column(
+                                                        mainAxisSize:
+                                                        MainAxisSize.max,
+                                                        crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                            const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                16,
+                                                                2,
+                                                                0,
+                                                                2),
+                                                            child: Text(
+                                                              reviews_text[i],
+                                                              style: FlutterFlowTheme.of(
+                                                                  context)
+                                                                  .labelMedium
+                                                                  .override(
+                                                                fontFamily:
+                                                                FlutterFlowTheme.of(context)
+                                                                    .labelMediumFamily,
+                                                                letterSpacing:
+                                                                0,
+                                                                useGoogleFonts: GoogleFonts
+                                                                    .asMap()
+                                                                    .containsKey(
+                                                                    FlutterFlowTheme.of(context).labelMediumFamily),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding: const EdgeInsets.all(8.0),
+                                                      child: InkWell(
+                                                        splashColor: Colors.transparent,
+                                                        focusColor: Colors.transparent,
+                                                        hoverColor: Colors.transparent,
+                                                        highlightColor:
+                                                        Colors.transparent,
+                                                        onTap: () async {
+                                                          setState(() {
+                                                            reviews_text.removeAt(i);
+                                                          });
+                                                        },
+                                                        child: Container(
+                                                          width: 60,
+                                                          height: 60,
+                                                          decoration:
+                                                          BoxDecoration(
+                                                            color: FlutterFlowTheme
+                                                                .of(context)
+                                                                .secondaryBackground,
+                                                            boxShadow: const [
+                                                              BoxShadow(
+                                                                blurRadius: 4,
+                                                                color: Color(
+                                                                    0x33000000),
+                                                                offset: Offset(
+                                                                  0,
+                                                                  2,
+                                                                ),
+                                                              )
+                                                            ],
+                                                            borderRadius:
+                                                            BorderRadius
+                                                                .circular(8),
+                                                            border: Border.all(
+                                                              color: FlutterFlowTheme
+                                                                  .of(context)
+                                                                  .error,
+                                                              width: 2,
+                                                            ),
+                                                          ),
+                                                          child: Icon(
+                                                            Icons.close_rounded,
+                                                            color: FlutterFlowTheme
+                                                                .of(context)
+                                                                .error,
+                                                            size: 32,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
                                                 ),
-                                              ],
-                                            ),
+                                              ),
+                                            ).animateOnPageLoad(animationsMap[
+                                            'containerOnPageLoadAnimation2']!),
                                           ),
                                         ],
                                         if(reviews_text.length == 0 && widget.id != -1)Padding(
@@ -3182,6 +3178,8 @@ class _WriteArticleState extends State<WriteArticle>
                                             ),
                                           ),
                                         ),
+                                        SizedBox(height: 60,),
+
                                       ],
                                     ),
                                   ),
